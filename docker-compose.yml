@@ -1,0 +1,20 @@
+version: '2'
+volumes:
+  lumeo-container-name:
+services:
+  gpu:
+    build: ./gpu
+    privileged: true
+  lumeo:
+    #image: lumeo/gateway-nvidia-dgpu:latest
+    build: ./lumeo
+    restart: unless-stopped
+    volumes:
+      - "lumeo-container-name:/var/lib/lumeo"
+    environment:
+      LUMEO_APP_ID: <your app ID>
+      LUMEO_API_KEY: <your API key>
+    privileged: true
+    network_mode: "host"
+    depends_on: 
+      - gpu 
