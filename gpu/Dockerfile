@@ -9,7 +9,7 @@ ENV VERSION="2.113.4"
 ENV BALENA_MACHINE_NAME="genericx86-64-ext"
 
 # Set variables for the Yocto version of the OS
-ENV YOCTO_VERSION=5.15.62
+ENV YOCTO_VERSION=5.15.54
 ENV YOCTO_KERNEL=${YOCTO_VERSION}-yocto-standard
 
 # Set variables to download proper NVIDIA driver
