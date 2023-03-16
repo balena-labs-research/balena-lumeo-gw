@@ -25,6 +25,7 @@ Clone this repo to your development device then set the following values:
 
 If everything is set up properly, you should see the output below (for your gpu model) in the terminal:
 
+```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 470.86       Driver Version: 470.86       CUDA Version: 11.4     |
 |-------------------------------+----------------------+----------------------+
@@ -44,5 +45,6 @@ If everything is set up properly, you should see the output below (for your gpu 
 |=============================================================================|
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+ 
+```
 
 This is based on https://github.com/balena-io-examples/nvidia-x86 for running NVIDIA gpus on balena.
