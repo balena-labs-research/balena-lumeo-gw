@@ -27,7 +27,13 @@ Clone this repo to your development device then set the following values:
 
 - `NVIDIA_DRIVER_VERSION` is the version of the Nvidia driver to download and build using [the list found here](https://www.nvidia.com/en-us/drivers/unix/) It needs to be compatible with the version in the underlying Lumeo base image, and must be the same in both the lumeo and gpu containers.
 
-If everything is set up properly, you should see the output below (for your gpu model) in the terminal:
+## Pushing the code
+
+Flash your device with a provisioned balenaOS image from your balenaCloud dashboard (or see preloading as well)
+
+Use the [balena CLI](https://docs.balena.io/reference/balena-cli/) to push this code to your devices. The gateway should then eventually show up in your Lumeo console.
+
+You may need to reboot after your gateway updates! If everything is set up properly, you should see the output below (for your gpu model) in the terminal:
 
 ```
 +-----------------------------------------------------------------------------+
@@ -50,12 +56,6 @@ If everything is set up properly, you should see the output below (for your gpu 
 |  No running processes found                                                 |
 +-----------------------------------------------------------------------------+ 
 ```
-
-## Pushing the code
-
-Flash your device with a provisioned balenaOS image from your balenaCloud dashboard (or see preloading as well)
-
-Use the [balena CLI](https://docs.balena.io/reference/balena-cli/) to push this code to your devices. The gateway should then eventually show up in your Lumeo console.
 
 ### see also
 This is based on https://github.com/balena-io-examples/nvidia-x86 for running NVIDIA gpus on balena.
