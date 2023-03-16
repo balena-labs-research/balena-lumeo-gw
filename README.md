@@ -11,6 +11,10 @@ The gpu container downloads the kernel source file for our exact OS version, bui
 
 Clone this repo to your development device then set the following values:
 
+### docker-compose settings
+
+- Set the `LUMEO_APP_ID` and `LUMEO_API_KEY` environment variables to values found in your Lumeo console. You could also define these in the balenaCloud dashboard as [fleet or device variables](https://docs.balena.io/learn/manage/variables/).
+
 ### gpu container settings
 
 - `VERSION` is the version of balenaOS being used on your device. This needs to be URL-encoded, so a plus sign (+) if present needs to be written as `%2B`.
@@ -47,4 +51,11 @@ If everything is set up properly, you should see the output below (for your gpu 
 +-----------------------------------------------------------------------------+ 
 ```
 
+## Pushing the code
+
+Flash your device with a provisioned balenaOS image from your balenaCloud dashboard (or see preloading as well)
+
+Use the [balena CLI](https://docs.balena.io/reference/balena-cli/) to push this code to your devices. The gateway should then eventually show up in your Lumeo console.
+
+### see also
 This is based on https://github.com/balena-io-examples/nvidia-x86 for running NVIDIA gpus on balena.
