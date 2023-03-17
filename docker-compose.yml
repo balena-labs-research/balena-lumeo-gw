@@ -13,8 +13,8 @@ services:
     volumes:
       - 'lumeo-container-name:/var/lib/lumeo'
     environment:
-      LUMEO_APP_ID: 9a0ed720-1308-4be5-9c4b-6ed316bbced2
-      LUMEO_API_KEY: $wmBiqpLuctoIKjpLoKkc45BQNIEiaWOj
+      LUMEO_APP_ID: <your lumeo app id>
+      LUMEO_API_KEY: <your lumeo api key>
     privileged: true
     network_mode: host
     depends_on:
